@@ -1,7 +1,8 @@
-var express = require('express');
+const express = require('express');
 const bodyparser = require('body-parser')
 
-var app = express();
+const taskRouter = require('./src/controllers/task')
+var app = express()
 
 app.use(bodyparser.json())
 app.use((req, res, next) => {
@@ -16,5 +17,6 @@ app.use((req, res, next) => {
     );
     next();
 });
+app.use('/task', taskRouter)
 
 module.exports = app
