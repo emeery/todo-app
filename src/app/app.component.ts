@@ -12,5 +12,7 @@ export class AppComponent {
     private dlg: MatDialog,
     // public autService: AuthService
   ) { }
-  onLogin(){ console.log('uu')}
+  onLogin(){
+    this.dlg.open(AddtweetComponent);
+  }
 }
