@@ -8,6 +8,8 @@ import {MatGridListModule} from '@angular/material/grid-list';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatInputModule} from '@angular/material/input';
 import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
+import {MatIconModule} from '@angular/material/icon';
+import {MatGridListModule} from '@angular/material/grid-list';
 @NgModule({
   exports: [
     MatSliderModule,
@@ -19,7 +21,10 @@ import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
     MatFormFieldModule,
     MatInputModule,
     MatDialogModule,
-    MatProgressSpinnerModule
+    MatProgressSpinnerModule,
+    MatIconModule,
+    MatGridListModule,
+    MatDialogModule
   ],
   imports: [
       MatSliderModule,
@@ -31,7 +36,10 @@ import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
       MatFormFieldModule,
       MatInputModule,
       MatDialogModule,
-      MatProgressSpinnerModule
+      MatProgressSpinnerModule,
+      MatIconModule,
+      MatGridListModule,
+      MatDialogModule,
     ]
 })
 export class AngularMaterialModule {}

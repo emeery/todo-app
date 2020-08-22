@@ -1,0 +1,20 @@
+npm run dev
+npm run start
+mongod
+
+VAR funciona tanto en el scope global como en el local
+LET: local
+use strict
+closure //
+git checkout HEAD src/components/auth/Signup.js
+git reset HEAD --hard
+ npm run build
+
+gerardoemery@live.com.mx
+gerardobautista40@outlook.com
+
+
+totodile
+
+Ctrl-Alt-/
+ctlr+alt+p: theme

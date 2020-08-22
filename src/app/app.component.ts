@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { MatDialog } from '@angular/material';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,9 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'todo';
+  constructor(
+    private dlg: MatDialog,
+    // public autService: AuthService
+  ) { }
+  onLogin(){ console.log('uu')}
 }

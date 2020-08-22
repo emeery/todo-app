@@ -1,1 +1,26 @@
 <app-toolbar></app-toolbar>
+<mat-grid-list cols="2" rowHeight="2:3">
+  <mat-grid-tile>
+    <button (click)="onLogin()" class="full" mat-raised-button colo>AGREGAR TAREA</button>
+  </mat-grid-tile>
+  <mat-grid-tile>
+    <div style="display:flex;flex-direction:column;">
+      <mat-card>
+        <mat-card-header>
+          <mat-card-title>Primer Tarea</mat-card-title>
+        </mat-card-header>
+        <mat-card-content>
+          Descripcion
+        </mat-card-content>
+      </mat-card>
+      <mat-card>
+        <mat-card-header>
+          <mat-card-title>Segunda Tarea</mat-card-title>
+        </mat-card-header>
+        <mat-card-content>
+          Descripcion
+        </mat-card-content>
+      </mat-card>
+    </div>
+  </mat-grid-tile>
+</mat-grid-list>

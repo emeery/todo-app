@@ -1,0 +1,9 @@
+mat-grid-tile :nth-child(1) {
+  background: lightblue;
+}
+mat-card {
+  width: 100%;
+  background: salmon !important;
+}
+mat-card-header,mat-card-title {background: salmon !important;}
+.full {width: 100% !important}
