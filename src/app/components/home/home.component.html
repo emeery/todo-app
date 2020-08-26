@@ -1,5 +1,5 @@
 <button (click)="createTask()" class="btn" mat-raised-button>AGREGAR TAREA</button>
-<mat-grid-list *ngIf="tasks.length > 0 && !spinner; else notFirst" cols="3" class="myGridList" rowHeight="2:1">
+<mat-grid-list *ngIf="tasks.length > 0; else notFirst" cols="3" class="myGridList" rowHeight="2:1">
   <mat-grid-tile *ngFor="let t of tasks; let i = index">
     <mat-card>
       <mat-card-header>
