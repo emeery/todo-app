@@ -25,7 +25,7 @@ export class TasksService {
     task._id = null
     return this.http.post<Task>(BACKEND_URL, task)
   }
-  editTask(task: Task): Observable<Task> {  console.log('r',task)
+  editTask(task: Task): Observable<Task> {
   var id = task._id;
    return this.http.put<Task>(BACKEND_URL + id, task)
  }
