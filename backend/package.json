@@ -1,5 +1,5 @@
 {
-    "name": "backend",
+    "name": "todo-app-backend",
     "version": "1.0.0",
     "scripts": {
         "start": "node server.js"
@@ -8,5 +8,8 @@
         "body-parser": "^1.18.3",
         "express": "^4.16.3",
         "mongoose": "^5.1.2"
+    },
+    "engines": {
+      "node": "12.14.1"
     }
 }

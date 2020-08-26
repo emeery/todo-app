@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient} from '@angular/common/http';
-import { environment } from 'src/environments/environment';
+import { environment } from 'src/environments/environment.prod';
 import { Observable } from 'rxjs/internal/Observable';
 import { Task } from '../model/task';
 import { Subject } from 'rxjs';
@@ -21,13 +21,13 @@ export class TasksService {
   getTask(id): Observable<Task> {
     return this.http.get<Task>(BACKEND_URL + id)
   }
-  addTask(user: Task): Observable<Task> {
-    user._id = null
-    return this.http.post<Task>(BACKEND_URL, user)
+  addTask(task: Task): Observable<Task> {
+    task._id = null
+    return this.http.post<Task>(BACKEND_URL, task)
   }
-  editTask(user): Observable<Task> {
-   const id = user._id
-   return this.http.put<Task>(BACKEND_URL + id, user)
+  editTask(task: Task): Observable<Task> {  console.log('r',task)
+  var id = task._id;
+   return this.http.put<Task>(BACKEND_URL + id, task)
  }
   deleteTask(id: string): Observable<any> {
     return this.http.delete(BACKEND_URL + id)

@@ -20,12 +20,6 @@ export class HomeComponent implements OnInit {
   ngOnInit(): void {
     this.getTasks()
   }
-  createTask() {
-    this.dlg.open(FormComponent).beforeClose()
-    .subscribe(()=> {
-      this.getTasks()
-    })
-  }
   getTasks() {
     this.taskService.getTasks().subscribe((tsk: Task[]) => {
       this.tasks = tsk;
@@ -35,10 +29,19 @@ export class HomeComponent implements OnInit {
       this.tasks = tsk;
     });
   }
+  createTask() {
+    this.dlg.open(FormComponent)
+    .beforeClose()
+    .subscribe(()=> {
+      this.getTasks()
+    })
+  }
   onEdit(tskid: string) {
-    this.taskService.editTask(tskid)
-    .subscribe(twet => {});
-    this.dlg.open(EditformComponent, {data: {id: tskid }});
+    this.dlg.open(EditformComponent, {data: {id: tskid }})
+    .beforeClose()
+    .subscribe(()=> {
+      this.getTasks()
+    })
   }
   onDelete(id: string) {
    this.taskService.deleteTask(id).subscribe(() => {

@@ -26,13 +26,13 @@ router.get('/:id', async(req, res) => {
 });
 router.put('/:id', async(req, res) => {
     try {
-        const newTask = new Task({
-            _id: req.body.id,
-            title: req.body.title
-        })
-        await Task.updateOne({ _id: req.params.id }, newTask );
-        res.status(200).json({ msg: 'tarea actualizada' })
-    } catch (error) {
+      const {title} = req.body
+        if(!title) res.status(404).json({msg: 'verifica tus datos'})
+        const task = await Task.findOne({ _id: req.params.id })
+        task.title = title
+        await task.save()
+        res.status(200).send(task)
+    } catch (e) {
         res.status(404).send(e)
     }
 });

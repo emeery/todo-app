@@ -24,10 +24,10 @@ export class FormComponent implements OnInit {
       });
     }
     onSubmit() {
-      this.taskService.addTask(this.tweetForm.value);
-      this.dlgRef.close();
-      this.dlgRef.afterClosed() //
-      .subscribe(() => this.taskService.getTasks())
+      this.taskService.addTask(this.tweetForm.value)
+      .subscribe(() => {
+        this.dlgRef.close()
+      })
     }
 
 }
