@@ -7,21 +7,19 @@ import {MatDialogModule} from '@angular/material/dialog';
 import {MatGridListModule} from '@angular/material/grid-list';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatInputModule} from '@angular/material/input';
-import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
+import {MatProgressBarModule} from '@angular/material/progress-bar';
 import {MatIconModule} from '@angular/material/icon';
-import {MatGridListModule} from '@angular/material/grid-list';
 @NgModule({
   exports: [
     MatSliderModule,
     MatToolbarModule,
     MatCardModule,
     MatButtonModule,
-    MatGridListModule,
     MatDialogModule,
     MatFormFieldModule,
     MatInputModule,
     MatDialogModule,
-    MatProgressSpinnerModule,
+    MatProgressBarModule,
     MatIconModule,
     MatGridListModule,
     MatDialogModule
@@ -36,9 +34,8 @@ import {MatGridListModule} from '@angular/material/grid-list';
       MatFormFieldModule,
       MatInputModule,
       MatDialogModule,
-      MatProgressSpinnerModule,
+      MatProgressBarModule,
       MatIconModule,
-      MatGridListModule,
       MatDialogModule,
     ]
 })

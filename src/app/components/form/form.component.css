@@ -1,0 +1,19 @@
+.mat-card {
+    background: #191919;
+}
+
+.custom-dd .mat-dialog-container {
+    overflow-y: hidden;
+    background: #191919;
+    width: 370px;
+    height: 350px;
+    border: solid 2px lightgreen;
+}
+
+.mat-button {
+    color: tan;
+}
+textarea {color:coral;}
+.placeholder {
+    color: lightgreen;
+}

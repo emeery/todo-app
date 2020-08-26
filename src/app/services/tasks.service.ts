@@ -1,0 +1,35 @@
+import { Injectable } from '@angular/core';
+import { HttpClient} from '@angular/common/http';
+import { environment } from 'src/environments/environment';
+import { Observable } from 'rxjs/internal/Observable';
+import { Task } from '../model/task';
+import { Subject } from 'rxjs';
+
+const BACKEND_URL = environment.apiUrl + '/task/';
+@Injectable({
+  providedIn: 'root'
+})
+export class TasksService {
+  private taskChanged = new Subject<Task[]>();
+  constructor(private http: HttpClient) { }
+  getUserListener() {
+    return this.taskChanged.asObservable();
+  }
+  getTasks(): Observable<Task[]> {
+    return this.http.get<Task[]>(BACKEND_URL)
+  }
+  getTask(id): Observable<Task> {
+    return this.http.get<Task>(BACKEND_URL + id)
+  }
+  addTask(user: Task): Observable<Task> {
+    user._id = null
+    return this.http.post<Task>(BACKEND_URL, user)
+  }
+  editTask(user): Observable<Task> {
+   const id = user._id
+   return this.http.put<Task>(BACKEND_URL + id, user)
+ }
+  deleteTask(id: string): Observable<any> {
+    return this.http.delete(BACKEND_URL + id)
+  }
+}

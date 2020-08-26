@@ -1,5 +1,6 @@
 const express = require('express');
 const bodyparser = require('body-parser')
+require('./src/config/db')
 
 const taskRouter = require('./src/controllers/task')
 var app = express()

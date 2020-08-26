@@ -1,9 +1,26 @@
-mat-grid-tile :nth-child(1) {
-  background: lightblue;
+.mat-card
+{background: #2c3e50; }
+.mat-card-actions{
+  padding: 0px 0px;
+  background: transparent;
+  border-bottom-color: 2px blueviolet;
 }
-mat-card {
-  width: 100%;
-  background: salmon !important;
+.mat-card-title { color: bisque !important;}
+.mat-card-actions,
+.mat-card-content,
+.mat-card-subtitle {
+  margin-bottom: 0px;
+  border-top-color: rebeccapurple !important;
 }
-mat-card-header,mat-card-title {background: salmon !important;}
-.full {width: 100% !important}
+.btn {
+  background: khaki;
+  width:100%;
+  margin-bottom: 2em;
+}
+.sin.mat-card {
+  background:  #34495e;
+  color: cornflowerblue;
+  border-bottom-color: solid 2px steelblue;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.sin.mat-card .mat-card-content { font-size: 25px; text-align: center; }

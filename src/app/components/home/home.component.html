@@ -1,25 +1,21 @@
-<mat-grid-list cols="2" rowHeight="2:3">
-  <mat-grid-tile>
-    <button (click)="onLogin()" class="full" mat-raised-button colo>AGREGAR TAREA</button>
-  </mat-grid-tile>
-  <mat-grid-tile>
-    <div style="display:flex;flex-direction:column;">
-      <mat-card>
-        <mat-card-header>
-          <mat-card-title>Primer Tarea</mat-card-title>
-        </mat-card-header>
-        <mat-card-content>
-          Descripcion
-        </mat-card-content>
-      </mat-card>
-      <mat-card>
-        <mat-card-header>
-          <mat-card-title>Segunda Tarea</mat-card-title>
-        </mat-card-header>
-        <mat-card-content>
-          Descripcion
-        </mat-card-content>
-      </mat-card>
-    </div>
+<button (click)="createTask()" class="btn" mat-raised-button>AGREGAR TAREA</button>
+<mat-grid-list *ngIf="tasks.length > 0 && !spinner; else notFirst" cols="3" class="myGridList" rowHeight="2:1">
+  <mat-grid-tile *ngFor="let t of tasks; let i = index">
+    <mat-card>
+      <mat-card-header>
+        <mat-card-title>{{ t.title}}</mat-card-title>
+        <mat-card-subtitle>{{ t.date }}</mat-card-subtitle>
+      </mat-card-header>
+      <mat-card-actions>
+        <button (click)="onEdit(t._id)" mat-button>...</button>
+        <button (click)="onDelete(t._id)" color="warn" mat-button>
+          X
+        </button>
+      </mat-card-actions>
+    </mat-card>
   </mat-grid-tile>
 </mat-grid-list>
+
+<ng-template #notFirst>
+  <mat-progress-bar mode="indeterminate"></mat-progress-bar>
+</ng-template>

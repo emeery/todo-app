@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { MatDialog } from '@angular/material';
+// import { MatDialog } from '@angular/material';
 
 @Component({
   selector: 'app-root',
@@ -9,10 +9,10 @@ import { MatDialog } from '@angular/material';
 export class AppComponent {
   title = 'todo';
   constructor(
-    private dlg: MatDialog,
-    // public autService: AuthService
+    // private dlg: MatDialog,
+
   ) { }
   onLogin(){
-    this.dlg.open(AddtweetComponent);
+    // this.dlg.open(AddtweetComponent);
   }
 }
