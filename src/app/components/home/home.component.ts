@@ -13,6 +13,7 @@ import { EditformComponent } from '../editform/editform.component';
 export class HomeComponent implements OnInit {
   tasks: Task[] = [];
   tskSub: Subscription;
+  date: string;
   constructor(
     public taskService: TasksService,
     public dlg: MatDialog) { }
